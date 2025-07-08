@@ -403,10 +403,67 @@
     <section class="contacts">
         <h2 class="section-title">Контакты</h2>
         <div class="contact-info">
-            <div class="contact-item">
-                <strong>Телефон:</strong> +7 (919) 588-81-21
-            </div>
-            <div class="contact-item">
+<div class="contact-item">
+    <span class="contact-label">Телефон:</span>
+    <div class="protected-phone">
+        <!-- SVG с номером, стилизованный под основной шрифт -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODAgNDAiPjxzdHlsZT50ZXh0e2ZvbnQtZmFtaWx5OidNb250c2VycmF0JyxzYW5zLXNlcmlmO2ZvbnQtd2VpZ2h0OjQwMDtmb250LXNpemU6MTZweDtmaWxsOiMzMzM7fTwvc3R5bGU+PHRleHQgeD0iMTAiIHk9IjI4Ij4rNyAoOTE5KSA1ODgtODEtMjE8L3RleHQ+PC9zdmc+" 
+             alt="Контактный телефон" 
+             class="phone-image"
+             width="220">
+        
+        <!-- Скрытая ссылка для звонков -->
+        <a href="tel:+79195888121" class="phone-call-link" aria-label="Позвонить"></a>
+    </div>
+</div>
+
+<style>
+    /* Общие стили текста */
+    .contact-label {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        color: #333;
+    }
+    
+    .protected-phone {
+        position: relative;
+        display: inline-block;
+        margin-left: 12px;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    
+    .phone-image {
+        height: auto;
+        max-width: 100%;
+        pointer-events: none;
+        vertical-align: middle;
+    }
+    
+    .phone-call-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 10;
+    }
+    
+    /* Адаптация */
+    @media (max-width: 768px) {
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        .protected-phone {
+            margin-left: 8px;
+        }
+        .phone-image {
+            width: 190px;
+        }
+    }
+</style>            <div class="contact-item">
                 <strong></strong> Понедельник-суббота с 9:00 до 21:00
             </div>
             <div class="contact-item">
