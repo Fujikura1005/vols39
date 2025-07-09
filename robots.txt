@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /       # Разрешить индексацию всего сайта
+Disallow: /admin/  # Закрыть от индексации раздел /admin/
+Disallow: /tmp/
+Sitemap: https://vols39.ru/sitemap.xml  # Указать путь к sitemap
